@@ -11,7 +11,7 @@
 		F15F09A91E25CC04003BA0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F09A81E25CC04003BA0FF /* Assets.xcassets */; };
 		F15F09AC1E25CC04003BA0FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F15F09AA1E25CC04003BA0FF /* MainMenu.xib */; };
 		F15F09B71E25CC28003BA0FF /* FLOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09B31E25CC28003BA0FF /* FLOpenGLView.swift */; };
-		F15F09B81E25CC28003BA0FF /* ShaderLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09B41E25CC28003BA0FF /* ShaderLoader.swift */; };
+		F15F09B81E25CC28003BA0FF /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09B41E25CC28003BA0FF /* ShaderProgram.swift */; };
 		F15F09B91E25CC28003BA0FF /* tutorial.fs in Resources */ = {isa = PBXBuildFile; fileRef = F15F09B51E25CC28003BA0FF /* tutorial.fs */; };
 		F15F09BA1E25CC28003BA0FF /* tutorial.vs in Resources */ = {isa = PBXBuildFile; fileRef = F15F09B61E25CC28003BA0FF /* tutorial.vs */; };
 /* End PBXBuildFile section */
@@ -23,7 +23,7 @@
 		F15F09AB1E25CC04003BA0FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F15F09AD1E25CC04003BA0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15F09B31E25CC28003BA0FF /* FLOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOpenGLView.swift; sourceTree = "<group>"; };
-		F15F09B41E25CC28003BA0FF /* ShaderLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderLoader.swift; sourceTree = "<group>"; };
+		F15F09B41E25CC28003BA0FF /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
 		F15F09B51E25CC28003BA0FF /* tutorial.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tutorial.fs; sourceTree = "<group>"; };
 		F15F09B61E25CC28003BA0FF /* tutorial.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tutorial.vs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +60,7 @@
 			children = (
 				F15F09B51E25CC28003BA0FF /* tutorial.fs */,
 				F15F09B61E25CC28003BA0FF /* tutorial.vs */,
-				F15F09B41E25CC28003BA0FF /* ShaderLoader.swift */,
+				F15F09B41E25CC28003BA0FF /* ShaderProgram.swift */,
 				F15F09B31E25CC28003BA0FF /* FLOpenGLView.swift */,
 				F15F09A61E25CC04003BA0FF /* AppDelegate.swift */,
 				F15F09A81E25CC04003BA0FF /* Assets.xcassets */,
@@ -145,7 +145,7 @@
 			files = (
 				F15F09A71E25CC04003BA0FF /* AppDelegate.swift in Sources */,
 				F15F09B71E25CC28003BA0FF /* FLOpenGLView.swift in Sources */,
-				F15F09B81E25CC28003BA0FF /* ShaderLoader.swift in Sources */,
+				F15F09B81E25CC28003BA0FF /* ShaderProgram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

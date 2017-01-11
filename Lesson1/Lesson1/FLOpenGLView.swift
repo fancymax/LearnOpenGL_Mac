@@ -28,7 +28,6 @@ class FLOpenGLView: NSOpenGLView {
         
         self.openGLContext = context
     }
-    
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -39,7 +38,6 @@ class FLOpenGLView: NSOpenGLView {
         
         self.openGLContext?.flushBuffer()
     }
-    
     
     override func prepareOpenGL() {
         super.prepareOpenGL()
@@ -68,8 +66,12 @@ class FLOpenGLView: NSOpenGLView {
             glEnableVertexAttribArray(0)
         glBindVertexArray(0)
         
-        let glProgram = ShaderLoader.sharedInstance.programWithVertexShader("tutorial.vs", fragmentShader: "tutorial.fs")
-        glUseProgram(glProgram)
+        let glProgram = ShaderProgram()
+        glProgram.attachShader("tutorial.vs", withType: GL_VERTEX_SHADER)
+        glProgram.attachShader("tutorial.fs", withType: GL_FRAGMENT_SHADER)
+        glProgram.link()
+        glProgram.use()
+        
         glBindVertexArray(VAO)
         
         glDrawArrays(GLenum(GL_TRIANGLES), 0, 3)
