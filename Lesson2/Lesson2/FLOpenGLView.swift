@@ -11,6 +11,8 @@ import Cocoa
 
 class FLOpenGLView: NSOpenGLView {
     
+    var normalmap: Texture?
+    
     override func awakeFromNib()
     {
         let attr = [
@@ -49,21 +51,48 @@ class FLOpenGLView: NSOpenGLView {
         
         var VAO:GLuint = 0
         glGenVertexArrays(1, &VAO)
+        defer {
+            glDeleteBuffers(1, &VAO)
+        }
         
         var VBO:GLuint =  0
         glGenBuffers(1, &VBO)
+        defer {
+            glDeleteBuffers(1, &VBO)
+        }
+        
+        var EBO:GLuint = 0
+        glGenBuffers(1, &EBO)
+        defer {
+            glDeleteBuffers(1, &EBO)
+        }
         
         let vertices:[GLfloat] = [
-            -0.5, -0.5, 0.0,
-            0.5, -0.5, 0.0,
-            0.0,  0.5, 0.0
+            // Positions       // Colors        // Texture Coords
+            0.5,  0.5, 0.0,   1.0, 0.0, 0.0,   1.0, 1.0, // Top Right
+            0.5, -0.5, 0.0,   0.0, 1.0, 0.0,   1.0, 0.0, // Bottom Right
+            -0.5, -0.5, 0.0,   0.0, 0.0, 1.0,   0.0, 0.0, // Bottom Left
+            -0.5,  0.5, 0.0,   1.0, 1.0, 0.0,   0.0, 1.0  // Top Left
+        ]
+        
+        let indices:[GLuint] = [  // Note that we start from 0!
+            0, 1, 3,  // First Triangle
+            1, 2, 3   // Second Triangle
         ]
         
         glBindVertexArray(VAO)
             glBindBuffer(GLenum(GL_ARRAY_BUFFER), VBO)
             glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<GLfloat>.size * vertices.count ,vertices, GLenum(GL_STATIC_DRAW))
-            glVertexAttribPointer(0, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, nil)
+            
+            glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), EBO)
+            glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), MemoryLayout<GLuint>.size * indices.count, indices, GLenum(GL_STATIC_DRAW))
+            
+            glVertexAttribPointer(0, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(MemoryLayout<GLfloat>.size * 8), nil)
             glEnableVertexAttribArray(0)
+            
+            let point2offset = UnsafeRawPointer(bitPattern: MemoryLayout<GLfloat>.size * 6)
+            glVertexAttribPointer(2, 2, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(MemoryLayout<GLfloat>.size * 8), point2offset)
+            glEnableVertexAttribArray(2)
         glBindVertexArray(0)
         
         let glProgram = ShaderProgram()
@@ -72,8 +101,9 @@ class FLOpenGLView: NSOpenGLView {
         glProgram.link()
         glProgram.use()
         
+        normalmap = Texture.loadFromFile("image.png")
         glBindVertexArray(VAO)
-        glDrawArrays(GLenum(GL_TRIANGLES), 0, 3)
+        glDrawElements(GLenum(GL_TRIANGLES), 6, GLenum(GL_UNSIGNED_INT), nil)
         glBindVertexArray(0)
     }
     
