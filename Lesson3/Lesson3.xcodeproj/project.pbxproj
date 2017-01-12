@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F11516B41E271A6900944266 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11516B31E271A6900944266 /* Matrix4.swift */; };
+		F11516B61E27244100944266 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11516B51E27244100944266 /* Scene.swift */; };
+		F15F09ED1E260F1E003BA0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09EC1E260F1E003BA0FF /* AppDelegate.swift */; };
+		F15F09EF1E260F1E003BA0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15F09EE1E260F1E003BA0FF /* Assets.xcassets */; };
+		F15F09F21E260F1E003BA0FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F15F09F01E260F1E003BA0FF /* MainMenu.xib */; };
+		F15F09FF1E260F5C003BA0FF /* FLOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09F91E260F5C003BA0FF /* FLOpenGLView.swift */; };
+		F15F0A001E260F5C003BA0FF /* texture1.png in Resources */ = {isa = PBXBuildFile; fileRef = F15F09FA1E260F5C003BA0FF /* texture1.png */; };
+		F15F0A011E260F5C003BA0FF /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09FB1E260F5C003BA0FF /* ShaderProgram.swift */; };
+		F15F0A021E260F5C003BA0FF /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15F09FC1E260F5C003BA0FF /* Texture.swift */; };
+		F15F0A031E260F5C003BA0FF /* tutorial.fs in Resources */ = {isa = PBXBuildFile; fileRef = F15F09FD1E260F5C003BA0FF /* tutorial.fs */; };
+		F15F0A041E260F5C003BA0FF /* tutorial.vs in Resources */ = {isa = PBXBuildFile; fileRef = F15F09FE1E260F5C003BA0FF /* tutorial.vs */; };
+		F15F0A061E260FAC003BA0FF /* texture2.png in Resources */ = {isa = PBXBuildFile; fileRef = F15F0A051E260FAC003BA0FF /* texture2.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F11516B31E271A6900944266 /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
+		F11516B51E27244100944266 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F15F09E91E260F1E003BA0FF /* Lesson3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15F09EC1E260F1E003BA0FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F15F09EE1E260F1E003BA0FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F15F09F11E260F1E003BA0FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F15F09F31E260F1E003BA0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15F09F91E260F5C003BA0FF /* FLOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOpenGLView.swift; sourceTree = "<group>"; };
+		F15F09FA1E260F5C003BA0FF /* texture1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture1.png; sourceTree = "<group>"; };
+		F15F09FB1E260F5C003BA0FF /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		F15F09FC1E260F5C003BA0FF /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		F15F09FD1E260F5C003BA0FF /* tutorial.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tutorial.fs; sourceTree = "<group>"; };
+		F15F09FE1E260F5C003BA0FF /* tutorial.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tutorial.vs; sourceTree = "<group>"; };
+		F15F0A051E260FAC003BA0FF /* texture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture2.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F15F09E61E260F1E003BA0FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F15F09E01E260F1E003BA0FF = {
+			isa = PBXGroup;
+			children = (
+				F15F09EB1E260F1E003BA0FF /* Lesson3 */,
+				F15F09EA1E260F1E003BA0FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F15F09EA1E260F1E003BA0FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F15F09E91E260F1E003BA0FF /* Lesson3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F15F09EB1E260F1E003BA0FF /* Lesson3 */ = {
+			isa = PBXGroup;
+			children = (
+				F11516B31E271A6900944266 /* Matrix4.swift */,
+				F15F09FA1E260F5C003BA0FF /* texture1.png */,
+				F15F0A051E260FAC003BA0FF /* texture2.png */,
+				F15F09FC1E260F5C003BA0FF /* Texture.swift */,
+				F15F09FE1E260F5C003BA0FF /* tutorial.vs */,
+				F15F09FD1E260F5C003BA0FF /* tutorial.fs */,
+				F11516B51E27244100944266 /* Scene.swift */,
+				F15F09FB1E260F5C003BA0FF /* ShaderProgram.swift */,
+				F15F09F91E260F5C003BA0FF /* FLOpenGLView.swift */,
+				F15F09EC1E260F1E003BA0FF /* AppDelegate.swift */,
+				F15F09EE1E260F1E003BA0FF /* Assets.xcassets */,
+				F15F09F01E260F1E003BA0FF /* MainMenu.xib */,
+				F15F09F31E260F1E003BA0FF /* Info.plist */,
+			);
+			path = Lesson3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F15F09E81E260F1E003BA0FF /* Lesson3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15F09F61E260F1E003BA0FF /* Build configuration list for PBXNativeTarget "Lesson3" */;
+			buildPhases = (
+				F15F09E51E260F1E003BA0FF /* Sources */,
+				F15F09E61E260F1E003BA0FF /* Frameworks */,
+				F15F09E71E260F1E003BA0FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lesson3;
+			productName = Lesson3;
+			productReference = F15F09E91E260F1E003BA0FF /* Lesson3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F15F09E11E260F1E003BA0FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = fancy;
+				TargetAttributes = {
+					F15F09E81E260F1E003BA0FF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F15F09E41E260F1E003BA0FF /* Build configuration list for PBXProject "Lesson3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F15F09E01E260F1E003BA0FF;
+			productRefGroup = F15F09EA1E260F1E003BA0FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F15F09E81E260F1E003BA0FF /* Lesson3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F15F09E71E260F1E003BA0FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15F09EF1E260F1E003BA0FF /* Assets.xcassets in Resources */,
+				F15F09F21E260F1E003BA0FF /* MainMenu.xib in Resources */,
+				F15F0A031E260F5C003BA0FF /* tutorial.fs in Resources */,
+				F15F0A041E260F5C003BA0FF /* tutorial.vs in Resources */,
+				F15F0A061E260FAC003BA0FF /* texture2.png in Resources */,
+				F15F0A001E260F5C003BA0FF /* texture1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F15F09E51E260F1E003BA0FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11516B41E271A6900944266 /* Matrix4.swift in Sources */,
+				F15F09ED1E260F1E003BA0FF /* AppDelegate.swift in Sources */,
+				F11516B61E27244100944266 /* Scene.swift in Sources */,
+				F15F0A021E260F5C003BA0FF /* Texture.swift in Sources */,
+				F15F0A011E260F5C003BA0FF /* ShaderProgram.swift in Sources */,
+				F15F09FF1E260F5C003BA0FF /* FLOpenGLView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F15F09F01E260F1E003BA0FF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15F09F11E260F1E003BA0FF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F15F09F41E260F1E003BA0FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F15F09F51E260F1E003BA0FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		F15F09F71E260F1E003BA0FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Lesson3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fancymax.test.Lesson3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F15F09F81E260F1E003BA0FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Lesson3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fancymax.test.Lesson3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F15F09E41E260F1E003BA0FF /* Build configuration list for PBXProject "Lesson3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15F09F41E260F1E003BA0FF /* Debug */,
+				F15F09F51E260F1E003BA0FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F15F09F61E260F1E003BA0FF /* Build configuration list for PBXNativeTarget "Lesson3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15F09F71E260F1E003BA0FF /* Debug */,
+				F15F09F81E260F1E003BA0FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F15F09E11E260F1E003BA0FF /* Project object */;
+}
