@@ -9,6 +9,8 @@
 import Foundation
 import GLKit
 
+let M_PI_F = Float(M_PI)
+
 class Scene {
     fileprivate var program: ShaderProgram
     var texture1: Texture?

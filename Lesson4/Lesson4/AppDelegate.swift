@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  Lesson3
+//  Lesson4
 //
-//  Created by fancymax on 1/11/2017.
+//  Created by fancymax on 1/12/2017.
 //  Copyright © 2017年 fancy. All rights reserved.
 //
 
 import Cocoa
-
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -19,9 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     fileprivate var scene: Scene!
     
     fileprivate var ticks: UInt64 = AppDelegate.getTicks()
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Do some GL setup.
+        glEnable(GLenum(GL_DEPTH_TEST)) 
         
         scene = Scene()
         
@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                       repeats: true)
         RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
-
+    
     func timerFireMethod(_ sender: Timer!) {
         // Render the scene.
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
@@ -55,6 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         gettimeofday(&t, nil)
         return UInt64(t.tv_sec * 1000) + UInt64(t.tv_usec / 1000)
     }
+
 
 }
 
