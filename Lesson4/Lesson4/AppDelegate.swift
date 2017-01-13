@@ -25,8 +25,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         scene = Scene()
         
-        scene.render()
-        
         // Create a timer to render.
         timer = Timer(timeInterval: 1.0 / 60.0,
                       target: self,
@@ -39,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func timerFireMethod(_ sender: Timer!) {
         // Render the scene.
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
-        scene.render()
+        scene.render(view.projectionMatrix)
         glFlush()
         view.flush()
         

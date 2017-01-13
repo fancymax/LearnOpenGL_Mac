@@ -109,7 +109,7 @@ class Scene {
         glBindVertexArray(0)
     }
     
-    func render()  {
+    func render(_ projection:Matrix4)  {
         program.use()
         
         glActiveTexture(GLenum(GL_TEXTURE0))
@@ -127,7 +127,6 @@ class Scene {
         let view = Matrix4.translationMatrix(x: 0, y: 0, z: -4)
         glUniformMatrix4fv(viewLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(view.matrix))
 
-        let projection = Matrix4.perspectiveMatrix(fov: 45, aspect: 480/360, near: 0.1, far: 100)
         glUniformMatrix4fv(projectionLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(projection.matrix))
         
         glBindVertexArray(VAO)

@@ -689,11 +689,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <openGLView fixedFrame="YES" useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-mu-RW9" customClass="FLOpenGLView" customModule="Lesson4" customModuleProvider="target">
+                    <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-mu-RW9" customClass="FLOpenGLView" customModule="Lesson4" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </openGLView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="aJB-mu-RW9" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="GPg-lW-ZEx"/>
+                    <constraint firstAttribute="trailing" secondItem="aJB-mu-RW9" secondAttribute="trailing" id="aLL-4r-5ZX"/>
+                    <constraint firstItem="aJB-mu-RW9" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="km0-yr-xgm"/>
+                    <constraint firstAttribute="bottom" secondItem="aJB-mu-RW9" secondAttribute="bottom" id="tU6-Gs-23t"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="114" y="427"/>
         </window>

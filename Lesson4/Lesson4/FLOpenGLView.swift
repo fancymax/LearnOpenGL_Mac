@@ -11,8 +11,7 @@ import Cocoa
 
 class FLOpenGLView: NSOpenGLView {
     
-    var texture1: Texture?
-    var texture2: Texture?
+    var projectionMatrix = Matrix4()
     
     override func awakeFromNib()
     {
@@ -36,6 +35,9 @@ class FLOpenGLView: NSOpenGLView {
     override func reshape() {
         let frame = self.frame
         glViewport(0, 0, GLsizei(frame.width), GLsizei(frame.height))
+        
+        let aspectRatio = Float(frame.size.width) / Float(frame.size.height)
+        projectionMatrix = Matrix4.perspectiveMatrix(fov: M_PI_F / 4.0, aspect: aspectRatio, near: 0.1, far: 200.0)
     }
     
     func flush() {
