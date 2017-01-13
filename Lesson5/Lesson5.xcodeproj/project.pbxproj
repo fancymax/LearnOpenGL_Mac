@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1C14AD41E286C55005AD8EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AD31E286C55005AD8EE /* AppDelegate.swift */; };
+		F1C14AD61E286C55005AD8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AD51E286C55005AD8EE /* Assets.xcassets */; };
+		F1C14AD91E286C55005AD8EE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AD71E286C55005AD8EE /* MainMenu.xib */; };
+		F1C14AE91E286C86005AD8EE /* FLOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE01E286C86005AD8EE /* FLOpenGLView.swift */; };
+		F1C14AEA1E286C86005AD8EE /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE11E286C86005AD8EE /* Matrix4.swift */; };
+		F1C14AEB1E286C86005AD8EE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE21E286C86005AD8EE /* Scene.swift */; };
+		F1C14AEC1E286C86005AD8EE /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE31E286C86005AD8EE /* ShaderProgram.swift */; };
+		F1C14AED1E286C86005AD8EE /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE41E286C86005AD8EE /* Texture.swift */; };
+		F1C14AEE1E286C86005AD8EE /* texture1.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AE51E286C86005AD8EE /* texture1.png */; };
+		F1C14AEF1E286C86005AD8EE /* texture2.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AE61E286C86005AD8EE /* texture2.png */; };
+		F1C14AF01E286C86005AD8EE /* tutorial.fs in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AE71E286C86005AD8EE /* tutorial.fs */; };
+		F1C14AF11E286C86005AD8EE /* tutorial.vs in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AE81E286C86005AD8EE /* tutorial.vs */; };
+		F1C14AF51E28C533005AD8EE /* FLglmWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AF41E28C533005AD8EE /* FLglmWrapper.h */; };
+		F1C14AF71E28CAC6005AD8EE /* FLglmWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AF61E28CAC6005AD8EE /* FLglmWrapper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1C14AD01E286C55005AD8EE /* Lesson5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C14AD31E286C55005AD8EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1C14AD51E286C55005AD8EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1C14AD81E286C55005AD8EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F1C14ADA1E286C55005AD8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1C14AE01E286C86005AD8EE /* FLOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOpenGLView.swift; sourceTree = "<group>"; };
+		F1C14AE11E286C86005AD8EE /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
+		F1C14AE21E286C86005AD8EE /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		F1C14AE31E286C86005AD8EE /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		F1C14AE41E286C86005AD8EE /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		F1C14AE51E286C86005AD8EE /* texture1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture1.png; sourceTree = "<group>"; };
+		F1C14AE61E286C86005AD8EE /* texture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture2.png; sourceTree = "<group>"; };
+		F1C14AE71E286C86005AD8EE /* tutorial.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tutorial.fs; sourceTree = "<group>"; };
+		F1C14AE81E286C86005AD8EE /* tutorial.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tutorial.vs; sourceTree = "<group>"; };
+		F1C14AF21E28C461005AD8EE /* Lesson5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Lesson5-Bridging-Header.h"; path = "Lesson5/Lesson5-Bridging-Header.h"; sourceTree = "<group>"; };
+		F1C14AF41E28C533005AD8EE /* FLglmWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = FLglmWrapper.h; sourceTree = "<group>"; };
+		F1C14AF61E28CAC6005AD8EE /* FLglmWrapper.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = FLglmWrapper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1C14ACD1E286C55005AD8EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1C14AC71E286C55005AD8EE = {
+			isa = PBXGroup;
+			children = (
+				F1C14AF41E28C533005AD8EE /* FLglmWrapper.h */,
+				F1C14AF61E28CAC6005AD8EE /* FLglmWrapper.m */,
+				F1C14AF21E28C461005AD8EE /* Lesson5-Bridging-Header.h */,
+				F1C14AD21E286C55005AD8EE /* Lesson5 */,
+				F1C14AD11E286C55005AD8EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1C14AD11E286C55005AD8EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1C14AD01E286C55005AD8EE /* Lesson5.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1C14AD21E286C55005AD8EE /* Lesson5 */ = {
+			isa = PBXGroup;
+			children = (
+				F1C14AE51E286C86005AD8EE /* texture1.png */,
+				F1C14AE61E286C86005AD8EE /* texture2.png */,
+				F1C14AE71E286C86005AD8EE /* tutorial.fs */,
+				F1C14AE81E286C86005AD8EE /* tutorial.vs */,
+				F1C14AE11E286C86005AD8EE /* Matrix4.swift */,
+				F1C14AE41E286C86005AD8EE /* Texture.swift */,
+				F1C14AE01E286C86005AD8EE /* FLOpenGLView.swift */,
+				F1C14AE31E286C86005AD8EE /* ShaderProgram.swift */,
+				F1C14AE21E286C86005AD8EE /* Scene.swift */,
+				F1C14AD31E286C55005AD8EE /* AppDelegate.swift */,
+				F1C14AD51E286C55005AD8EE /* Assets.xcassets */,
+				F1C14AD71E286C55005AD8EE /* MainMenu.xib */,
+				F1C14ADA1E286C55005AD8EE /* Info.plist */,
+			);
+			path = Lesson5;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1C14ACF1E286C55005AD8EE /* Lesson5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1C14ADD1E286C55005AD8EE /* Build configuration list for PBXNativeTarget "Lesson5" */;
+			buildPhases = (
+				F1C14ACC1E286C55005AD8EE /* Sources */,
+				F1C14ACD1E286C55005AD8EE /* Frameworks */,
+				F1C14ACE1E286C55005AD8EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lesson5;
+			productName = Lesson5;
+			productReference = F1C14AD01E286C55005AD8EE /* Lesson5.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1C14AC81E286C55005AD8EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = fancy;
+				TargetAttributes = {
+					F1C14ACF1E286C55005AD8EE = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F1C14ACB1E286C55005AD8EE /* Build configuration list for PBXProject "Lesson5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1C14AC71E286C55005AD8EE;
+			productRefGroup = F1C14AD11E286C55005AD8EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1C14ACF1E286C55005AD8EE /* Lesson5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1C14ACE1E286C55005AD8EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C14AF01E286C86005AD8EE /* tutorial.fs in Resources */,
+				F1C14AD61E286C55005AD8EE /* Assets.xcassets in Resources */,
+				F1C14AF11E286C86005AD8EE /* tutorial.vs in Resources */,
+				F1C14AD91E286C55005AD8EE /* MainMenu.xib in Resources */,
+				F1C14AEF1E286C86005AD8EE /* texture2.png in Resources */,
+				F1C14AEE1E286C86005AD8EE /* texture1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1C14ACC1E286C55005AD8EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C14AEB1E286C86005AD8EE /* Scene.swift in Sources */,
+				F1C14AED1E286C86005AD8EE /* Texture.swift in Sources */,
+				F1C14AF51E28C533005AD8EE /* FLglmWrapper.h in Sources */,
+				F1C14AEC1E286C86005AD8EE /* ShaderProgram.swift in Sources */,
+				F1C14AF71E28CAC6005AD8EE /* FLglmWrapper.m in Sources */,
+				F1C14AD41E286C55005AD8EE /* AppDelegate.swift in Sources */,
+				F1C14AE91E286C86005AD8EE /* FLOpenGLView.swift in Sources */,
+				F1C14AEA1E286C86005AD8EE /* Matrix4.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1C14AD71E286C55005AD8EE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1C14AD81E286C55005AD8EE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1C14ADB1E286C55005AD8EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1C14ADC1E286C55005AD8EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		F1C14ADE1E286C55005AD8EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Lesson5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fancymax.test.Lesson5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lesson5/Lesson5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F1C14ADF1E286C55005AD8EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Lesson5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fancymax.test.Lesson5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lesson5/Lesson5-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1C14ACB1E286C55005AD8EE /* Build configuration list for PBXProject "Lesson5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C14ADB1E286C55005AD8EE /* Debug */,
+				F1C14ADC1E286C55005AD8EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1C14ADD1E286C55005AD8EE /* Build configuration list for PBXNativeTarget "Lesson5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C14ADE1E286C55005AD8EE /* Debug */,
+				F1C14ADF1E286C55005AD8EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1C14AC81E286C55005AD8EE /* Project object */;
+}
