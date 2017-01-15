@@ -20,7 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     fileprivate var ticks: UInt64 = AppDelegate.getTicks()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        FLglmWrapper.test()
         
         // Do some GL setup.
         glEnable(GLenum(GL_DEPTH_TEST))

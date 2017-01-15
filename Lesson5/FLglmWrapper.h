@@ -9,9 +9,8 @@
 
 @interface FLglmWrapper:NSObject
 
-+(void) test;
++(float*) lookAt:(float*)position target:(float*)target upVector:(float*)up;
     
-
 
 
 
