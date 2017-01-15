@@ -120,10 +120,10 @@ class Scene {
         glBindTexture(GLenum(GL_TEXTURE_2D), texture2!.textureId)
         glUniform1i(program.getUniformLocation("ourTexture2")!, 1)
         
-        var cameraPosition:[Float] = [0.0,0.0,3.0]
-        var cameraTarget:[Float] = [1.0,0.0,0.0]
-        var upVector:[Float] = [0.0,1.0,0.0]
-        let view = FLglmWrapper.look(at:&cameraPosition, target: &cameraTarget, upVector: &upVector)
+        var cameraPosition:[Float] = [0.0,0.0,8.0]
+        var cameraTarget:[Float] = [0.0,0.0,0.0]
+        var cameraUp:[Float] = [0.0,1.0,0.0]
+        let view = FLglmWrapper.look(at:&cameraPosition, target: &cameraTarget, upVector: &cameraUp)
         glUniformMatrix4fv(viewLocation, GLsizei(1), GLboolean(GL_FALSE), view)
         
         glUniformMatrix4fv(projectionLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(projection.matrix))
