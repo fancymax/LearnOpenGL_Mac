@@ -9,8 +9,6 @@
 import Foundation
 import GLKit
 
-let M_PI_F = Float(M_PI)
-
 class Scene {
     fileprivate var program: ShaderProgram
     var texture1: Texture?
@@ -18,9 +16,6 @@ class Scene {
     fileprivate var VAO: GLuint = 0
     
     fileprivate var rotation: Float = 0.01
-    fileprivate var camX:Float = 0
-    fileprivate var camZ:Float = 8
-    fileprivate var targetX:Float = 0
     
     fileprivate var modelLocation: GLint
     fileprivate var viewLocation: GLint
@@ -57,7 +52,7 @@ class Scene {
             glDeleteBuffers(1, &EBO)
         }
         
-        let vertices:[GLfloat] = [
+        let cubeVertices:[GLfloat] = [
             -0.5, -0.5, -0.5,  0.0, 0.0,
             0.5, -0.5, -0.5,  1.0, 0.0,
             0.5,  0.5, -0.5,  1.0, 1.0,
@@ -103,7 +98,7 @@ class Scene {
         
         glBindVertexArray(VAO)
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), VBO)
-        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<GLfloat>.size * vertices.count ,vertices, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<GLfloat>.size * cubeVertices.count ,cubeVertices, GLenum(GL_STATIC_DRAW))
         
         glVertexAttribPointer(0, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(MemoryLayout<GLfloat>.size * 5), nil)
         glEnableVertexAttribArray(0)
@@ -114,7 +109,7 @@ class Scene {
         glBindVertexArray(0)
     }
     
-    func render(_ projection:Matrix4)  {
+    func render(_ projection:UnsafeMutablePointer<Float>)  {
         program.use()
         
         glActiveTexture(GLenum(GL_TEXTURE0))
@@ -125,35 +120,34 @@ class Scene {
         glBindTexture(GLenum(GL_TEXTURE_2D), texture2!.textureId)
         glUniform1i(program.getUniformLocation("ourTexture2")!, 1)
         
-        var cameraPosition:[Float] = [camX,0.0,camZ]
-        var cameraTarget:[Float] = [targetX,0.0,0.0]
+        //view
+        var cameraPosition:[Float] = [0,0.0,4]
+        var cameraTarget:[Float] = [0,0.0,0.0]
         var cameraUp:[Float] = [0.0,1.0,0.0]
-        let view = FLglmWrapper.look(at:&cameraPosition, target: &cameraTarget, upVector: &cameraUp)
+        let view = FLglmWrapper.look(atPosition:&cameraPosition, target: &cameraTarget, upVector: &cameraUp)
         glUniformMatrix4fv(viewLocation, GLsizei(1), GLboolean(GL_FALSE), view)
         //need to free pointers from C
         //free(view)
         //https://sketchytech.blogspot.com/2014/09/unsafe-pointers-in-swift-how-to-build.html
         FLglmWrapper.freeMatrix(view)
         
-        glUniformMatrix4fv(projectionLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(projection.matrix))
+        //projection
+        glUniformMatrix4fv(projectionLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(projection))
         
         let cubePositions:[[Float]] = [
             [0.0,0.0,0.0],
-            [2.0,5.0,-15.0],
-            [-3.8,-2.0,-12.3],
-            [2.4,-0.4,-3.5],
-            [-1.7,3.0,-7.5],
-            [1.3,-2.0,-2.5],
-            [1.5,2.0,-2.5],
-            [-1.3,1.0,-1.5]
+            [2.0,2.0,-3.0],
+            [-2.0,-2.0,-2.3],
         ]
+        
+        //model
         glBindVertexArray(VAO)
         for i in 0...cubePositions.count - 1 {
-            let angle = rotation *  M_PI_F + (Float)(i) * 0.1 * M_PI_F
-            let model = Matrix4.translationMatrix(x: cubePositions[i][0], y:cubePositions[i][1] , z:cubePositions[i][2]) *  Matrix4.rotationMatrix(angle: angle, x: 0, y: 1, z: 0)
-            glUniformMatrix4fv(modelLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(model.matrix))
+            var model = FLglmWrapper.translateAt(x: cubePositions[i][0], y: cubePositions[i][1], z: cubePositions[i][2])
+            model = FLglmWrapper.rotate(from: model, angle: rotation, x: 1, y: 0, z: 1)
+            glUniformMatrix4fv(modelLocation, GLsizei(1), GLboolean(GL_FALSE), model)
+            FLglmWrapper.freeMatrix(model)
             glDrawArrays(GLenum(GL_TRIANGLES), 0, 36)
-            
         }
         glBindVertexArray(0)
         
@@ -161,10 +155,7 @@ class Scene {
     }
     
     func cycle(_ secondsElapsed: Float) {
-        rotation += 0.0005 *  M_PI_F
-//        camZ += 0.005 *  M_PI_F
-//        camX += 0.001 *  M_PI_F
-//        targetX += 0.001 *  M_PI_F
+        rotation += 0.01
     }
     
     deinit {

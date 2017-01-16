@@ -9,8 +9,13 @@
 
 @interface FLglmWrapper:NSObject
 
-+(float*) lookAt:(float*)position target:(float*)target upVector:(float*)up;
++(float*) lookAtPosition:(float*)position target:(float*)target upVector:(float*)up;
++(float*) perspectiveAtFov:(float)FOV aspect:(float)aspect near:(float)near far:(float)far;
 +(void) freeMatrix:(float*)matrix;
+
++(float*) translateAtX:(float)x Y:(float)y Z:(float)z;
++(float*) translateFrom:(float*)arrayMatrix X:(float)x Y:(float)y Z:(float)z;
++(float*) rotateFrom:(float*)arrayMatrix angle:(float)angle X:(float)x Y:(float)y Z:(float)z;
     
 
 

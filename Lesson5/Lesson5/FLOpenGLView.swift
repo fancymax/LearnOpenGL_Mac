@@ -11,7 +11,7 @@ import Cocoa
 
 class FLOpenGLView: NSOpenGLView {
     
-    var projectionMatrix = Matrix4()
+    var projectionMatrix:UnsafeMutablePointer<Float>!
     
     override func awakeFromNib()
     {
@@ -36,8 +36,10 @@ class FLOpenGLView: NSOpenGLView {
         let frame = self.frame
         glViewport(0, 0, GLsizei(frame.width), GLsizei(frame.height))
         
+        FLglmWrapper.freeMatrix(projectionMatrix)
         let aspectRatio = Float(frame.size.width) / Float(frame.size.height)
-        projectionMatrix = Matrix4.perspectiveMatrix(fov: M_PI_F / 4.0, aspect: aspectRatio, near: 0.1, far: 500.0)
+        projectionMatrix = FLglmWrapper.perspective(atFov: 45.0, aspect: aspectRatio, near: 0.1, far: 100.0)
+        
     }
     
     func flush() {

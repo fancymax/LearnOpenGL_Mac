@@ -11,7 +11,6 @@
 		F1C14AD61E286C55005AD8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AD51E286C55005AD8EE /* Assets.xcassets */; };
 		F1C14AD91E286C55005AD8EE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1C14AD71E286C55005AD8EE /* MainMenu.xib */; };
 		F1C14AE91E286C86005AD8EE /* FLOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE01E286C86005AD8EE /* FLOpenGLView.swift */; };
-		F1C14AEA1E286C86005AD8EE /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE11E286C86005AD8EE /* Matrix4.swift */; };
 		F1C14AEB1E286C86005AD8EE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE21E286C86005AD8EE /* Scene.swift */; };
 		F1C14AEC1E286C86005AD8EE /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE31E286C86005AD8EE /* ShaderProgram.swift */; };
 		F1C14AED1E286C86005AD8EE /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C14AE41E286C86005AD8EE /* Texture.swift */; };
@@ -30,7 +29,6 @@
 		F1C14AD81E286C55005AD8EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F1C14ADA1E286C55005AD8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C14AE01E286C86005AD8EE /* FLOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLOpenGLView.swift; sourceTree = "<group>"; };
-		F1C14AE11E286C86005AD8EE /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
 		F1C14AE21E286C86005AD8EE /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		F1C14AE31E286C86005AD8EE /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
 		F1C14AE41E286C86005AD8EE /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				F1C14AE61E286C86005AD8EE /* texture2.png */,
 				F1C14AE71E286C86005AD8EE /* tutorial.fs */,
 				F1C14AE81E286C86005AD8EE /* tutorial.vs */,
-				F1C14AE11E286C86005AD8EE /* Matrix4.swift */,
 				F1C14AE41E286C86005AD8EE /* Texture.swift */,
 				F1C14AE01E286C86005AD8EE /* FLOpenGLView.swift */,
 				F1C14AE31E286C86005AD8EE /* ShaderProgram.swift */,
@@ -176,7 +173,6 @@
 				F1C14AF71E28CAC6005AD8EE /* FLglmWrapper.m in Sources */,
 				F1C14AD41E286C55005AD8EE /* AppDelegate.swift in Sources */,
 				F1C14AE91E286C86005AD8EE /* FLOpenGLView.swift in Sources */,
-				F1C14AEA1E286C86005AD8EE /* Matrix4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +332,7 @@
 				F1C14ADF1E286C55005AD8EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
