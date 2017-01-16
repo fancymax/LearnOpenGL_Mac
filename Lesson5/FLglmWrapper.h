@@ -10,6 +10,7 @@
 @interface FLglmWrapper:NSObject
 
 +(float*) lookAt:(float*)position target:(float*)target upVector:(float*)up;
++(void) freeMatrix:(float*)matrix;
     
 
 

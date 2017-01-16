@@ -44,6 +44,10 @@ array[15] = matrix[3][3];
     return array;
 }
 
++(void)freeMatrix:(float *)matrix {
+    free(matrix);
+}
+
 
 
 @end

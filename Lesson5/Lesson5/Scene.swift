@@ -16,7 +16,12 @@ class Scene {
     var texture1: Texture?
     var texture2: Texture?
     fileprivate var VAO: GLuint = 0
+    
     fileprivate var rotation: Float = 0.01
+    fileprivate var camX:Float = 0
+    fileprivate var camZ:Float = 8
+    fileprivate var targetX:Float = 0
+    
     fileprivate var modelLocation: GLint
     fileprivate var viewLocation: GLint
     fileprivate var projectionLocation: GLint
@@ -120,11 +125,15 @@ class Scene {
         glBindTexture(GLenum(GL_TEXTURE_2D), texture2!.textureId)
         glUniform1i(program.getUniformLocation("ourTexture2")!, 1)
         
-        var cameraPosition:[Float] = [0.0,0.0,8.0]
-        var cameraTarget:[Float] = [0.0,0.0,0.0]
+        var cameraPosition:[Float] = [camX,0.0,camZ]
+        var cameraTarget:[Float] = [targetX,0.0,0.0]
         var cameraUp:[Float] = [0.0,1.0,0.0]
         let view = FLglmWrapper.look(at:&cameraPosition, target: &cameraTarget, upVector: &cameraUp)
         glUniformMatrix4fv(viewLocation, GLsizei(1), GLboolean(GL_FALSE), view)
+        //need to free pointers from C
+        //free(view)
+        //https://sketchytech.blogspot.com/2014/09/unsafe-pointers-in-swift-how-to-build.html
+        FLglmWrapper.freeMatrix(view)
         
         glUniformMatrix4fv(projectionLocation, GLsizei(1), GLboolean(GL_FALSE), UnsafePointer<GLfloat>(projection.matrix))
         
@@ -153,6 +162,9 @@ class Scene {
     
     func cycle(_ secondsElapsed: Float) {
         rotation += 0.0005 *  M_PI_F
+//        camZ += 0.005 *  M_PI_F
+//        camX += 0.001 *  M_PI_F
+//        targetX += 0.001 *  M_PI_F
     }
     
     deinit {
