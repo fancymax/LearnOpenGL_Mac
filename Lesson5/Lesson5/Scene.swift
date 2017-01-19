@@ -46,12 +46,6 @@ class Scene {
             glDeleteBuffers(1, &VBO)
         }
         
-        var EBO:GLuint = 0
-        glGenBuffers(1, &EBO)
-        defer {
-            glDeleteBuffers(1, &EBO)
-        }
-        
         let cubeVertices:[GLfloat] = [
             -0.5, -0.5, -0.5,  0.0, 0.0,
             0.5, -0.5, -0.5,  1.0, 0.0,
